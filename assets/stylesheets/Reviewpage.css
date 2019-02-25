@@ -84,12 +84,26 @@ body {
 	padding-right: 30px;
 }
 
-.grid {
+.grid,
+.col-1-3,
+.col-2-3 {
 	padding-left: 15px;
 	padding-right: 15px;
 }
 
+.col-1-3,
+.col-2-3 {
+	display: inline-block;
+	vertical-align: top;
+}
 
+.col-1-3 {
+	width: 33.33%;
+}
+
+.col-2-3 {
+	width: 66.66%;
+}
 
 /*
   ========================================
@@ -257,7 +271,15 @@ p a {
 	text-transform: uppercase;
 }
 
+.btn-alt {
+	border: 1px solid #dfe2e5;
+	padding: 10px 30px;
+}
 
+.btn-alt:hover {
+	background: #fff;
+	color: #648880; 
+}
 
 .btn-default {
   border: 0;
@@ -284,10 +306,26 @@ p a {
 	line-height: 44px;
 	padding: 40px 0 22px 0;
 	text-transform: uppercase;
-  
+
 }
 
+/*
+  ========================================
+  Primary footer
+  ========================================
+*/
 
+.primary-footer {
+	color: #648880;
+	font-size: 14px;
+	padding-top: 44px;
+	padding-bottom: 44px;
+}
+
+.primary-footer small {
+	float: left;
+	font-weight: 400;
+}
 
 /*
   ========================================
@@ -343,6 +381,59 @@ p a {
   max-width: 100%
 }
 
+/*
+  ========================================
+  Resources
+  ========================================
+*/
+
+.speaker-info {
+	border: 1px solid #dfe2e5;
+	border-radius: 5px;
+	margin-top: 88px;
+	padding: 22px 0;
+	text-align: center;
+}
+
+.speaker {
+	margin-bottom: 44px;
+}
+
+.speaker-info img {
+  border-radius: 50%;
+  height: 130px;
+  margin: -66px 0 22px 0;
+  vertical-align: top;
+}
+
+/*
+  ========================================
+  Locations
+  ========================================
+*/
+
+.venue-theatre {
+  margin-bottom: 66px;
+}
+
+.venue-hotel {
+  margin-bottom: 22px;
+}
+
+.venue-map {
+  height: 264px;
+}
+
+/*
+  ========================================
+  Contact Us
+  ========================================
+*/
+
+.why-attend {
+	list-style: square;
+	margin: 0 0 22px 30px;
+}
 
 form {
 	margin-bottom: 22px
@@ -372,7 +463,7 @@ textarea {
 }
 .register-group input,
 .register-group textarea {
-  width:100%;
+  width: 100%;
 }
 .register-group select {
   height: 34px;
@@ -391,3 +482,77 @@ select#quantity {
 select:focus#quantity {
     width:auto\9;
 }
+/*
+  ========================================
+  News
+  ========================================
+*/
+
+table {
+	margin-bottom: 44px;
+	width: 100%;
+}
+
+table:last-child {
+	margin-bottom: 0;
+}
+
+th,
+td {
+  padding-bottom: 22px;
+  vertical-align: top;
+}
+th {
+  padding-right: 45px;
+  text-align: right;
+  width: 20%;
+}
+td {
+  width: 40%;
+}
+
+thead {
+  line-height: 44px;
+}
+thead th {
+  color: #648880;
+  font-size: 24px;
+}
+
+tbody th {
+  color: #a9b2b9;
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 22px;
+  text-transform: uppercase;
+}
+
+tbody td {
+  border-top: 1px solid #dfe2e5;
+  padding-top: 21px;
+}
+tbody td:first-of-type {
+  padding-right: 15px;
+}
+tbody td:last-of-type {
+  padding-left: 15px;
+}
+tbody td:only-of-type {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+table a {
+  color: #888;
+}
+table h4 {
+  margin-bottom: 0;
+}
+
+.schedule-offset {
+  color: #a9b2b9;
+}
+
+
+
+/*============    END OF CODE    =================*/

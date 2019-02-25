@@ -84,7 +84,7 @@ body {
 	padding-right: 30px;
 }
 
-.grid {
+.grid{
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -230,13 +230,11 @@ p a {
 	border-bottom: 1px solid #dfe2e5;
 }
 
-.primary-header a,
-.primary-footer a {
+.primary-header a {
 	color: #fff;
 }
 
-.primary-header a:hover,
-.primary-footer a:hover {
+.primary-header a:hover{
 	color: #648880;
 }
 
@@ -246,29 +244,20 @@ p a {
   ========================================
 */
 
-.btn {
-	border-radius: 5px;
-	color: #fff;
-	cursor: pointer;
-	display: inline-block;
-	font-weight: 400;
-	letter-spacing: .5px;
-	margin: 0;
-	text-transform: uppercase;
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #4bc970;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #3ac162;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
 }
-
-
-
-.btn-default {
-  border: 0;
-  background: #648880;
-  padding: 11px 30px;
-  font-size: 14px;
-}
-.btn-default:hover {
-  background: #77a198;
-}
-
 /*
   ========================================
   Primary header
@@ -315,13 +304,7 @@ p a {
   ========================================
 */
 
-.hero{
-	color: #fff;
-	line-height: 30px;
-	padding: 22px 80px 66px 80px;
-	text-align: center;
 
-}
 
 .hero h2 {
 	font-size: 36px;
@@ -336,58 +319,50 @@ p a {
 	color: #a9b2b9;
 }
 
-.teaser img {
-  border-radius: 5px;
-  display: block;
-  margin-bottom: 22px;
-  max-width: 100%
-}
 
 
 form {
-	margin-bottom: 22px
+	max-width: 480px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
 }
 
-input,
-select,
-textarea {
-	font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+input[type="text"],
+input[type="password"],
+input[type="email"],input[type="datetime-local"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
 }
 
-.register-group {
-	color: #648880;
-	cursor: pointer;
- 	font-weight: 400;
+fieldset {
+  margin-bottom: 30px;
+  border: none;
 }
 
-.register-group input,
-.register-group select,
-.register-group textarea {
-  border: 1px solid #c6c9cc;
-  border-radius: 5px;
-  color: #888;
+legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+label {
   display: block;
-  margin: 5px 0 27px 0;
-  padding: 5px 8px;
+  margin-bottom: 8px;
 }
-.register-group input,
-.register-group textarea {
-  width:100%;
-}
-.register-group select {
-  height: 34px;
-  width: 60px;
-}
-.register-group textarea {
-  height: 78px;
-}
-select.quantity {
-    width:auto;
-}
-/*IE FIX */
-select#quantity {
-    width:100%;
-}
-select:focus#quantity {
-    width:auto\9;
-}
+
+@media screen and (min-width: 480px) {
+
+ 
