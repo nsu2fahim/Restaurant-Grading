@@ -59,13 +59,6 @@ body {
 	font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-
-/*
-  ========================================
-  Grid
-  ========================================
-*/
-
 *,
 *:before,
 *:after {
@@ -74,8 +67,7 @@ body {
 			box-sizing: border-box;
 }
 
-.container,
-.grid {
+.container{
 	margin: 0 auto;
 	width: 960px;
 }
@@ -84,26 +76,7 @@ body {
 	padding-right: 30px;
 }
 
-.grid,
-.col-1-3,
-.col-2-3 {
-	padding-left: 15px;
-	padding-right: 15px;
-}
 
-.col-1-3,
-.col-2-3 {
-	display: inline-block;
-	vertical-align: top;
-}
-
-.col-1-3 {
-	width: 33.33%;
-}
-
-.col-2-3 {
-	width: 66.66%;
-}
 
 /*
   ========================================
@@ -133,7 +106,7 @@ body {
 */
 
 .row,
-.row-alt {
+.row-alt{
 	min-width: 960px;
 }
 
@@ -147,7 +120,10 @@ body {
    background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
    background: -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
    background: linear-gradient(to right, #a1d3b0, #f6f1d3);
-   padding: 44px 0 22px 0;
+   padding: 60px 0 250px 0;
+ }
+
+
  }
 
 /*
@@ -156,11 +132,11 @@ body {
   ========================================
 */
 
-h1, h3, h4, h5, p {
+h1, h3,h4,p{
   margin-bottom: 22px;
 }
 
-h1, h2, h3, h4 {
+h1,h3,h4{
 	color: #648880;
 }
 
@@ -169,24 +145,12 @@ h1 {
 	line-height: 44px;
 }
 
-h2 {
-	font-size: 24px;
-	line-height: 44px;
-}
-
 h3 {
 	font-size: 21px;
 }
 
 h4 {
-	font-size: 18px;
-}
-
-h5 {
-	color: #a9b2b9;
-	font-size: 14px;
-	font-weight: 400;
-	text-transform: uppercase;
+  font-size: 18px;
 }
 
 strong {
@@ -217,12 +181,12 @@ cite, em {
 */
 
 .lead {
-	text-align: center;
+  text-align: center;
 }
 
 .lead p {
-	font-size: 21px;
-	line-height: 33px;
+  font-size: 21px;
+  line-height: 33px;
 }
 
 /*
@@ -244,51 +208,12 @@ p a {
 	border-bottom: 1px solid #dfe2e5;
 }
 
-.primary-header a,
-.primary-footer a {
+.primary-header a{
 	color: #fff;
 }
 
-.primary-header a:hover,
-.primary-footer a:hover {
+.primary-header a:hover{
 	color: #648880;
-}
-
-/*
-  ========================================
-  Buttons
-  ========================================
-*/
-
-.btn {
-	border-radius: 5px;
-	color: #fff;
-	cursor: pointer;
-	display: inline-block;
-	font-weight: 400;
-	letter-spacing: .5px;
-	margin: 0;
-	text-transform: uppercase;
-}
-
-.btn-alt {
-	border: 1px solid #dfe2e5;
-	padding: 10px 30px;
-}
-
-.btn-alt:hover {
-	background: #fff;
-	color: #648880; 
-}
-
-.btn-default {
-  border: 0;
-  background: #648880;
-  padding: 11px 30px;
-  font-size: 14px;
-}
-.btn-default:hover {
-  background: #77a198;
 }
 
 /*
@@ -307,24 +232,6 @@ p a {
 	padding: 40px 0 22px 0;
 	text-transform: uppercase;
 
-}
-
-/*
-  ========================================
-  Primary footer
-  ========================================
-*/
-
-.primary-footer {
-	color: #648880;
-	font-size: 14px;
-	padding-top: 44px;
-	padding-bottom: 44px;
-}
-
-.primary-footer small {
-	float: left;
-	font-weight: 400;
 }
 
 /*
@@ -349,142 +256,7 @@ p a {
 
 /*
   ========================================
-  Home
-  ========================================
-*/
-
-.hero{
-	color: #fff;
-	line-height: 30px;
-	padding: 22px 80px 66px 80px;
-	text-align: center;
-
-}
-
-.hero h2 {
-	font-size: 36px;
-}
-
-.hero p {
-	font-size: 24px;
-	font-weight: 100;
-}
-
-.teaser a:hover h3 {
-	color: #a9b2b9;
-}
-
-.teaser img {
-  border-radius: 5px;
-  display: block;
-  margin-bottom: 22px;
-  max-width: 100%
-}
-
-/*
-  ========================================
-  Resources
-  ========================================
-*/
-
-.speaker-info {
-	border: 1px solid #dfe2e5;
-	border-radius: 5px;
-	margin-top: 88px;
-	padding: 22px 0;
-	text-align: center;
-}
-
-.speaker {
-	margin-bottom: 44px;
-}
-
-.speaker-info img {
-  border-radius: 50%;
-  height: 130px;
-  margin: -66px 0 22px 0;
-  vertical-align: top;
-}
-
-/*
-  ========================================
-  Locations
-  ========================================
-*/
-
-.venue-theatre {
-  margin-bottom: 66px;
-}
-
-.venue-hotel {
-  margin-bottom: 22px;
-}
-
-.venue-map {
-  height: 264px;
-}
-
-/*
-  ========================================
-  Contact Us
-  ========================================
-*/
-
-.why-attend {
-	list-style: square;
-	margin: 0 0 22px 30px;
-}
-
-form {
-	margin-bottom: 22px
-}
-
-input,
-select,
-textarea {
-	font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.register-group {
-	color: #648880;
-	cursor: pointer;
- 	font-weight: 400;
-}
-
-.register-group input,
-.register-group select,
-.register-group textarea {
-  border: 1px solid #c6c9cc;
-  border-radius: 5px;
-  color: #888;
-  display: block;
-  margin: 5px 0 27px 0;
-  padding: 5px 8px;
-}
-.register-group input,
-.register-group textarea {
-  width: 100%;
-}
-.register-group select {
-  height: 34px;
-  width: 60px;
-}
-.register-group textarea {
-  height: 78px;
-}
-select.quantity {
-    width:auto;
-}
-/*IE FIX */
-select#quantity {
-    width:100%;
-}
-select:focus#quantity {
-    width:auto\9;
-}
-/*
-  ========================================
-  News
+  Reviews
   ========================================
 */
 
@@ -508,7 +280,7 @@ th {
   width: 20%;
 }
 td {
-  width: 40%;
+  width: 60%;
 }
 
 thead {
@@ -553,6 +325,32 @@ table h4 {
   color: #a9b2b9;
 }
 
+/*
+  ========================================
+  Restaurant Card
+  ========================================
+*/
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  margin: 0 auto;
+}
 
-/*============    END OF CODE    =================*/
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-container {
+  padding: 2px 16px;
+}
+
+.card h4,p{
+  color:#005580;
+}
+.card-link{
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: top;
+}
