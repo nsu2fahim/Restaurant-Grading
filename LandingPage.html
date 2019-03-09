@@ -5,6 +5,7 @@
 	<title>Restaurant Grading</title>
 	<link rel="stylesheet" href="assets/stylesheets/LandingPage.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400">
+	<script src="assets/js/validations.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -40,16 +41,13 @@
 	<section class="row">
 		<div class="grid">
 	
-		<form align="center" action="#" method="post">
+		<form align="center" name="landing_form" action="#" method="post" onsubmit="return validateLandingPage()">
 			<fieldset class="register-group">
 				
 				<label>
 					Location
-					<input type="text" name="" placeholder="" required>
+					<input type="text" name="area_name" placeholder="Enter area name e.g. Gulshan" required>
 				</label>
-				
-
-
 				
 				<label>
 					Type
