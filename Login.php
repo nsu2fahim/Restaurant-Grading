@@ -1,11 +1,35 @@
 <?php
 session_start();
-$db = mysqli_connect("localhost","root","","authentication");
+$db = mysqli_connect("localhost","root","","restaurentsgrade");
 if(isset($_POST['register_btn'])){
     session_start();
-    $email = mysqli_real_escape_string($_POST['email']);
-    $password = mysqli_real_escape_string($_POST['password']);
+    $email =    $_POST['email'];
+    $password = $_POST['password'];
+
+    $email = stripcslashes($email);
+    $password = stripcslashes($password);
+
+    $email = mysqli_real_escape_string($email);
+    $password = mysqli_real_escape_string($password);
+
+    // connecting server and select database
+
+    mysqli_connect("localhost","root", "");
+    mysqli_select_db("restaurentsgrade");
+
+    //query
+    $result = mysqli_query("select * from users where email = '$email' and password = '$password'")
+        or die ("Failed to query database ".mysqli_error());
+
+    $row = mysqli_fetch_array($result);
+
+    if($row['email'] == $email && $row['password'] == $password){
+        echo "Login Success!!! Welcome ".$row['email'];
+    }else{
+        echo "Failed to login.";
+    }
 }
+
 ?>
 
 

@@ -3,26 +3,25 @@
    // if(session_id() == '' || !isset($_SESSION)){session_start();}
     $db = mysqli_connect("localhost","root","","restaurentsgrade");
     // check connection
-    if (mysqli_connect_errno()) {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    if ($db==false) {
+        die("ERROR".mysqli_error());
     }
-    if(isset($_POST['signup_btn'])){
-        session_start();
-        $username = $_POST['username'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $password2 = $_POST['password2'];
-        if($password == $password2){
-            $password = md5($password); // hash password before storing for security purpose
-            $sql = "INSERT INTO users(username, email, password) VALUES ('$username','$email','$password')";
-            mysqli_query($db, $sql);
-            $_SESSION['message'] = "You are now logged in";
-            $_SESSION['username'] = $username;
-            //header("location: home.php"); // redirect to home page
-        }else{
-            $_SESSION['message'] = "The two passwords don't match";
+        if(isset($_POST['signup_btn'])){
+            $username = $_POST['username'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $password2 = $_POST['password2'];
+            if($password == $password2){
+                $password = md5($password); // hash password before storing for security purpose
+                $sql = "INSERT INTO users(username, email, password) VALUES ('$username','$email','$password')";
+                mysqli_query($db, $sql);
+                $_SESSION['message'] = "You are now logged in";
+                $_SESSION['username'] = $username;
+                header("location: home.php"); // redirect to home page
+            }else{
+                $_SESSION['message'] = "The two passwords don't match";
+            }
         }
-    }
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
