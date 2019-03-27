@@ -31,27 +31,28 @@
 
     <!-- Main content -->
 
-    <form action="Bookingpage.html" method="post">
+    <form>
       
         <h1>Login</h1>
-        
+        <div id="loading_spinner" class="spinner" style="display: none;">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
         <fieldset>
-          
-         
           <label for="mail">Email:</label>
           <input type="email" id="mail" name="user_email" required>
           
           <label for="password">Password:</label>
           <input type="password" id="password" name="user_password" required>
           
-          
-        <button type="submit">Login</button>
+          <button id="login" type="submit">Login</button>
       </form>
 
     
   </section>
 
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="ajax/loginUser.js"></script>
 
 
 </body>
