@@ -1,4 +1,3 @@
-<!DOCTYPE>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +6,14 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400">
 </head>
 <body>
-<header class="primary-header container group">	
-			<h1 class="logo">
-        <a href="LandingPage.html">Restaurant<br>Grading</a>
-      </h1>
-    <h3 class="tagline">Welcome to the land of foodies . . . </h3>
-	<nav class="nav primary-nav">
-		<ul>
-      <li><a href="LandingPage.html">Home</a></li><!--
-     --><li><a href="SignUp.html">SignUp</a></li><!--
-     --><li><a href="Login.html">Login</a></li><!--
-     --><li><a href="contact.html">Contact Us</a></li>
-		</ul>
-	</nav>
-</header>
+
+<?php require('Navbar.php') ?>
 
 <section class="row-alt">
 	<div class="lead container">
-		
-		
+		<p>
+			You need to to login to place a reservation in a restaurant or use our site.
+		</p>
 	</div>
 </section>
 

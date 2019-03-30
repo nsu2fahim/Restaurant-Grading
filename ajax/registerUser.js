@@ -33,7 +33,7 @@ $(document).ready(function(){
             var result = JSON.parse(data);
             alert(result.message) //will show a panel for all alerts
             $('#loading_spinner').css("display", "none");
-        })
+        });
 
 
         return false;

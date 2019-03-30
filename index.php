@@ -10,48 +10,27 @@
 
 <body>
 		
-		<!-- Header --> 
-
-	<header class="primary-header container group">	
-			<h1 class="logo">
-				<a href="LandingPage.html"> Restaurant <br> Grading </a>
-			</h1>
-		<h3 class="tagline">Welcome to the land of foodies . . . </h3>
-	<nav class="nav primary-nav">
-		<ul>
-			<li><a href="LandingPage.html">Home</a></li><!--
-		 --><li><a href="Signup.html">Sign Up</a></li><!--
-		 --><li><a href="Login.html">Login</a></li><!--
-		 --><li><a href="contact.html">Contact Us</a></li>
-		</ul>
-	</nav>
-	</header>
-
-		<!-- Hero -->
+	<?php require('Navbar.php') ?>
 
 	<section class="hero container">
 		<h2>HUNGRY?</h2>
-		
 		<p>Order Online From Your Favourite Nearby Restaurants.You Can Find Any Type of Food With Just One Click</p>
-		
-		
 	</section>
 
-		<!-- Teaser -->
 	<section class="row">
 		<div class="grid">
 	
-		<form align="center" name="landing_form" action="#" method="post" onsubmit="return validateLandingPage()">
+		<form align="center" name="landing_form" action="Recommendation.php" method="get">
 			<fieldset class="register-group">
 				
 				<label>
 					Location
-					<input type="text" name="area_name" placeholder="Enter area name e.g. Gulshan" required>
+					<input type="text" id="area_name" name="area_name" placeholder="Enter area name e.g. Gulshan" required>
 				</label>
 				
 				<label>
 					Type
-					<select name="quantity" id="quantity" required>
+					<select name="type" class="type" id="quantity" required>
 						<option value="Thai" selected="">Thai</option>
 						<option value="Chinese">Chinese</option>
 						<option value="Bengali">Bengali</option>
@@ -63,10 +42,10 @@
 				
 			</fieldset>
 
-			<input class="btn btn-default" type="submit" name="submit" value="Submit">
+			<button class="btn btn-default" type="submit" id="searchresbtn">Search</button>
 		</form>
 
-	
+	  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </body>
 </html>

@@ -7,20 +7,8 @@
   <script src="assets/js/validations.js" type="text/javascript"></script>
 </head>
 <body>
-<header class="primary-header container group">	
-			<h1 class="logo">
-        <a href="LandingPage.html">Restaurant<br>Grading</a>
-      </h1>
-    <h3 class="tagline">Welcome to the land of foodies . . . </h3>
-	<nav class="nav primary-nav">
-		<ul>
-      <li><a href="LandingPage.html">Home</a></li><!--
-     --><li><a href="SignUp.html">SignUp</a></li><!--
-     --><li><a href="Login.html">Login</a></li><!--
-     --><li><a href="contact.html">Contact Us</a></li>
-		</ul>
-	</nav>
-</header>
+    
+<?php require('Navbar.php') ?>
 
 <section class="row-alt">
 	<div class="lead container">

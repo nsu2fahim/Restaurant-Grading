@@ -7,21 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<header class="primary-header container group">	
-			<h1 class="logo">
-        <a href="LandingPage.html"> Restaurant <br> Grading </a>
-      </h1>
-    <h3 class="tagline">Welcome to the land of foodies . . . </h3>
-	<nav class="nav primary-nav">
-		<ul>
-      <li><a href="LandingPage.html">Home</a></li><!--
-     --><li><a href="SignUp.html">SignUp</a></li><!--
-     --><li><a href="Login.html">Login</a></li><!--
-     --><li><a href="contact.html">Contact Us</a></li>
-		</ul>
-	</nav>
-</header>
-
+<?php require('Navbar.php') ?>
+<?php require('php/searchRestaurant.php') ?>
 <section class="row-alt">
 	<div class="card">
 	<a href="Gallery.html"><img src="assets/images/res.jpg" alt="Restaurant img" style="width:100%"></a> 
