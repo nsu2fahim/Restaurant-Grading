@@ -7,23 +7,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<?php require('Navbar.php') ?>
-<?php require('php/searchRestaurant.php') ?>
-<section class="row-alt">
-	<div class="card">
-	<a href="Gallery.html"><img src="assets/images/res.jpg" alt="Restaurant img" style="width:100%"></a> 
-	<div class="card-container">
-  <h4><b>Restaurant XYZ</b></h4>
-    <p>Dhanmondi,Dhaka,Bangladesh</p> 
-    <ul>
-    <a href="Menu.html" class="card-link">Menu</a>
-    <a href="Reviewpage.html" class="card-link">Reviews</a>
-    <a href="Bookingpage.html" class="card-link">Reservation</a>
-  </div>
-		
-	</div>
-
+	<?php require('Navbar.php') ?>
+	<?php require('php/searchRestaurant.php') ?>
+	<?php require('php/loggedin.php') ?>
+	
+	<section class="row-alt">
+		<?php 
+			if(mysqli_num_rows($results) > 0){
+				while($row = mysqli_fetch_array($results)){
+					echo "<div class='card'>";
+						echo '<a href=""><img src="'.$row['thumbnail'].'" alt="Restaurant img" style="width:100%"></a>';
+						echo '<div class="card-container">';
+								echo '<h4><b>'.$row['name'].'</b></h4>';
+								echo '<p>'.$row['location'].'</p>';
+								echo '<p>'.$row['rating'].'</p>';
+								echo '<a href="Menu.html" class="card-link">Menu</a>';
+								echo '<a href="Reviewpage.html" class="card-link">Reviews</a>';
+								if (isset($_SESSION['user_id'])){
+									echo '<a href="Bookingpage.html" class="card-link">Reserve Now</a>';
+								}
+								else{
+									echo '<a href="Bookingpage.html" class="card-link">Login to Reserve</a>';
+								}
+								
+						echo '</div>
+								</div><br>';
+				}
+			}
+			else{
+				echo "No results Found!";
+			}
+		?>
+	</section>
 </body>
-
-
 </html>

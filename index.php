@@ -35,7 +35,7 @@
 						<option value="Chinese">Chinese</option>
 						<option value="Bengali">Bengali</option>
 						<option value="Fast Food">Fast Food</option>
-						<option value="Seafood">Seafood</option>
+						<option value="Mexican">Mexican</option>
 						<option value="Others">Others</option>
 					</select>
 				</label>
