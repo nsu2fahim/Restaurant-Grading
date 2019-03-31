@@ -9,7 +9,6 @@
 <body>
 	<?php require('Navbar.php') ?>
 	<?php require('php/searchRestaurant.php') ?>
-	<?php require('php/loggedin.php') ?>
 	
 	<section class="row-alt">
 		<?php 
@@ -24,10 +23,15 @@
 								echo '<a href="Menu.html" class="card-link">Menu</a>';
 								echo '<a href="Reviewpage.html" class="card-link">Reviews</a>';
 								if (isset($_SESSION['user_id'])){
-									echo '<a href="Bookingpage.html" class="card-link">Reserve Now</a>';
+									echo '
+									<form action="Booking.php" method="get">
+										<input type="hidden" name="res_id" value="'.$row['id'].'">
+										<input type="submit" value="Reserve Now!">
+									</form>
+									';
 								}
 								else{
-									echo '<a href="Bookingpage.html" class="card-link">Login to Reserve</a>';
+									echo '<a href="Login.php" class="card-link">Login to Reserve</a>';
 								}
 								
 						echo '</div>

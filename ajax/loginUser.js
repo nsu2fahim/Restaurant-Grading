@@ -20,7 +20,8 @@ $(document).ready(function(){
             var result = JSON.parse(data);
             // console.log(data)
             if(result.status == 'success'){
-                $(location).attr('href', home_url);
+                // $(location).attr('href', home_url);
+                window.history.back();
             }
             else{
                 alert(result.message)
