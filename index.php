@@ -24,7 +24,7 @@
 			<fieldset class="register-group">
 				
 				<label>
-					Location
+					Location (Currently Available Areas: Gulshan, Banani, Dhanmondi, Bashundhara, Uttara, Mirpur)
 					<input type="text" id="area_name" name="area_name" placeholder="Enter area name e.g. Gulshan" required>
 				</label>
 				
@@ -36,6 +36,7 @@
 						<option value="Bengali">Bengali</option>
 						<option value="Fast Food">Fast Food</option>
 						<option value="Mexican">Mexican</option>
+						<option value="Indian">Indian</option>
 						<option value="Others">Others</option>
 					</select>
 				</label>

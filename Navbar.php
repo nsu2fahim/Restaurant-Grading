@@ -24,9 +24,18 @@
             </li>
             <?php 
                 if(isset($_SESSION['name'])){
-                    echo "<li>
+                    echo "
+
+                    <li>
+                    <a href='History.php'>My Bookings</a>
+                    </li>
+                    
+                    <li>
                     <a href='' id='logoutbtn'>Logout</a>
-                    </li>";
+                    </li>
+                    
+
+                    ";
                 }
             ?>
 		</ul>

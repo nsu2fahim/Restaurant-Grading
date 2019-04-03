@@ -22,8 +22,12 @@
 
     <!-- Main content -->
 
-  <form name="booking_form" onsubmit="return validateReservationForm()">
+  <form id="booking_form">
     <h1>Reservation Form</h1>
+    <div id="loading_spinner" class="spinner" style="display: none;">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+    </div>
     <p>Booking Restaurant: <strong><?php echo $restaurant_name ?></strong>.</p>
     <input type="hidden" id="res_id" value="<?php echo $_GET['res_id'] ?>" >
     <label for="date&time">Date & Time</label>

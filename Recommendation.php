@@ -18,7 +18,8 @@
 						echo '<a href=""><img src="'.$row['thumbnail'].'" alt="Restaurant img" style="width:100%"></a>';
 						echo '<div class="card-container">';
 								echo '<h4><b>'.$row['name'].'</b></h4>';
-								echo '<p>'.$row['location'].'</p>';
+								echo '<p>'.$row['address'].'</p>';
+								if($row['number'] > 0) echo '<p>'.$row['number'].'</p>';
 								echo '<p>'.$row['rating'].'</p>';
 								echo '<a href="Menu.html" class="card-link">Menu</a>';
 								echo '<a href="Reviewpage.html" class="card-link">Reviews</a>';

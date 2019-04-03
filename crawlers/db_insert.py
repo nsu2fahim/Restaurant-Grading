@@ -9,12 +9,12 @@ mydb = mysql.connector.connect(
 )
 
 cursor = mydb.cursor()
-with open('restaurant_data_file.csv') as csv_file:
+with open('r_gulshan.csv') as csv_file:
     # csv_reader = csv.reader(csv_file, delimiter=',')
     csv_data = csv.reader(csv_file, delimiter=',')
     # execute and insert the csv into the database.
     for row in csv_data:
-        cursor.execute('INSERT INTO restaurants(name, type, location, link, thumbnail, rating)''VALUES(%s, %s, %s, %s, %s, %s)',row)
+        cursor.execute('INSERT INTO restaurants(name, type, location, link, thumbnail, rating, number, address)''VALUES(%s, %s, %s, %s, %s, %s, %s, %s)',row)
         # print (row)
     #close the connection to the database.
     mydb.commit()
