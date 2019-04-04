@@ -20,7 +20,7 @@
 
     <!-- Main content -->
 
-    <form name="signup_form">
+    <form name="signup_form" id="signup_form">
       
         <h1>Sign Up</h1>
         <div id="loading_spinner" class="spinner" style="display: none;">

@@ -14,7 +14,7 @@
                 }
             ?>
             <li>
-                <a href="">
+                <a href="Profile.php">
                     <?php
                         if(isset($_SESSION['name'])){
                             echo $_SESSION['name'];

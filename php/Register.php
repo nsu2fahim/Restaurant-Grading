@@ -16,8 +16,6 @@
     else{
         $sql = "INSERT INTO users(full_name, email, password, phone) VALUES ('$username','$email','$password', '$phone')";
         mysqli_query($conn, $sql);
-        $_SESSION['name'] = $username;
-        $_SESSION['email'] = $email;
         echo json_encode(array('status'=>'success', 'message'=>'Registered Successfully.'));
     }
 

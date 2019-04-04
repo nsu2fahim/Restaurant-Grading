@@ -6,7 +6,7 @@ $(document).ready(function(){
             $(location).attr('href', home_url);
         }
         else{
-            $('#spinner').css("display", "block");
+            $('#loading_spinner').css("display", "block");
             $.get("php/bookingHistory.php", function(res){
                 var result = JSON.parse(res);
                 var tableHtml = "<table><tr><th>Booking ID</th><th>Restaurant name</th><th>Date / Time</th><th>Address</th><th>Reserved Seats</th><th>Status</th></tr>";
@@ -43,6 +43,8 @@ $(document).ready(function(){
                     
                     tableHtml += row;
                     tableHtml += '</table>';
+
+                    $('#loading_spinner').css("display", "none");
                     $('#table').html(tableHtml);
 
 

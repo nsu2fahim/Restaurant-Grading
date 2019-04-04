@@ -1,4 +1,12 @@
+var home_url = 'http://localhost:8888/Restaurant-Grading';
 $(document).ready(function(){
+    $.get("php/loggedin.php", function(res){
+        var rr = JSON.parse(res);
+        // console.log(rr);
+        if(rr.status == true){
+            $(location).attr('href', home_url);
+        }
+    });
     $('button#signup').click(function(){
         var name = $('input#name').val();
         var email = $('input#mail').val();
@@ -32,6 +40,8 @@ $(document).ready(function(){
         $.post("php/Register.php", Data, function(data){
             var result = JSON.parse(data);
             alert(result.message) //will show a panel for all alerts
+            // $('form#signup_form')[0].reset()
+            $(location).attr('href', home_url);
             $('#loading_spinner').css("display", "none");
         });
 
