@@ -12,7 +12,8 @@ $(document).ready(function(){
                 var new_pass = $('input#new_password').val();
 
                 if(new_pass.length < 7){
-                    alert("Password Length cannot be less than 7")
+                    // alert("Password Length cannot be less than 7")
+                    $('.messages').html('<div class="panel-error">'+'Password Length cannot be less than 7'+'</div>');
                     return false
                 }
 
@@ -25,7 +26,8 @@ $(document).ready(function(){
 
                 $.post('php/changePassword.php', Data, function(res){
                     var result = JSON.parse(res);
-                    alert(result.message) //will show a panel for all alerts
+                    // alert(result.message) //will show a panel for all alerts
+                    $('.messages').html('<div class="panel-default">'+result.message+'</div>');
                     $('#loading_spinner').css("display", "none");
                 });
 

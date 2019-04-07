@@ -430,3 +430,45 @@ Loading Spinner CSS
     -webkit-transform: scale(1.0);
   }
 }
+
+.panel-error {
+  display: inline-block;
+  background: #ffffff;
+  box-shadow:0px 0px 5px 5px #E74C3C;
+  -webkit-box-shadow:2px 2px 5px 5x #E74C3C;
+  -moz-box-shadow:2px 2px 5px 5px #E74C3C;
+  color: #E74C3C;
+  margin: 15px;
+  padding: 10px;
+  font-weight: bold;
+  min-width: 245px;
+  width: 245px;
+}
+
+.panel-success {
+  display: inline-block;
+  background: #ffffff;
+  box-shadow:0px 0px 5px 5px #0DAC50;
+  -webkit-box-shadow:2px 2px 5px 5x #0DAC50;
+  -moz-box-shadow:2px 2px 5px 5px #0DAC50;
+  color: #0DAC50;
+  margin: 15px;
+  padding: 10px;
+  font-weight: bold;
+  min-width: 245px;
+  width: 245px;
+}
+
+.panel-default {
+  display: inline-block;
+  background: #ffffff;
+  box-shadow:0px 0px 5px 5px #149AD1;
+  -webkit-box-shadow:2px 2px 5px 5x #149AD1;
+  -moz-box-shadow:2px 2px 5px 5px #149AD1;
+  color: #149AD1;
+  margin: 15px;
+  padding: 10px;
+  font-weight: bold;
+  min-width: 245px;
+  width: 245px;
+}

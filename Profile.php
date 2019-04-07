@@ -21,6 +21,7 @@
 			<div class="double-bounce1"></div>
 			<div class="double-bounce2"></div>
         </div>
+        <div class="messages"></div>
         
         <label for="name">Name:</label>
         <input type="text" id="name" value="" disabled>

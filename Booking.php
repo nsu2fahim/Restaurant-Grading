@@ -28,6 +28,7 @@
       <div class="double-bounce1"></div>
       <div class="double-bounce2"></div>
     </div>
+    <div class="messages"></div>
     <p>Booking Restaurant: <strong><?php echo $restaurant_name ?></strong>.</p>
     <input type="hidden" id="res_id" value="<?php echo $_GET['res_id'] ?>" >
     <label for="date&time">Date & Time</label>

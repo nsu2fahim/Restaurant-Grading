@@ -35,12 +35,14 @@ $(document).ready(function(){
                 var phone = $('input#phone').val();
 
                 if(phone.length < 11){
-                    alert("Enter a valid mobile number")
+                    // alert("Enter a valid mobile number")
+                    $('.messages').html('<div class="panel-error">'+'Enter a valid mobile number'+'</div>');
                     return false
                 }
             
                 if(isNaN(phone)){
-                    alert("Mobile Number can only contain numbers")
+                    // alert("Mobile Number can only contain numbers");
+                    $('.messages').html('<div class="panel-error">'+'Mobile Number can only contain numbers'+'</div>');
                     return false
                 }
 
@@ -55,7 +57,8 @@ $(document).ready(function(){
                     $("input").prop('disabled', true);
                     $('button#editactivate').css("display","block");
                     $('button#editprofile').css("display","none");
-                    alert(result.message) //will show a panel for all alerts
+                    // alert(result.message) //will show a panel for all alerts
+                    $('.messages').html('<div class="panel-success">'+result.message+'</div>');
                     $('#loading_spinner').css("display", "none");
                 });
 

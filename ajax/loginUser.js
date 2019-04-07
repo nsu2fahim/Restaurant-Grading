@@ -16,6 +16,8 @@ $(document).ready(function(){
             password: password
         };
 
+       
+
         $.post("php/Login.php", Data, function(data){
             var result = JSON.parse(data);
             // console.log(data)
@@ -24,7 +26,8 @@ $(document).ready(function(){
                 window.history.back();
             }
             else{
-                alert(result.message)
+                // console.log(result.message)
+                $('.messages').html('<div class="panel-error">'+result.message+'</div>');
             }
             $('#loading_spinner').css("display", "none");
         });

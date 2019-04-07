@@ -15,7 +15,8 @@
         <div id="loading_spinner" class="spinner" style="display: none;">
 			<div class="double-bounce1"></div>
 			<div class="double-bounce2"></div>
-    	</div>
+        </div>
+        <div class="messages"></div>
         <label for="cur_password">Current Password</label>
         <input type="password" id="cur_password" placeholder="*******" name="cur_password" required>
 

@@ -26,15 +26,17 @@
             <div class="double-bounce1"></div>
             <div class="double-bounce2"></div>
         </div>
+        
         <fieldset>
-          <label for="mail">Email:</label>
-          <input type="email" id="mail" name="user_email" required>
+            <div class="messages"></div>
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="user_email" required>
           
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="user_password" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="user_password" required>
           
-          <button id="login" type="submit">Login</button>
-      </form>
+            <button id="login" type="submit">Login</button>
+        </form>
 
     
   </section>

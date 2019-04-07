@@ -28,7 +28,7 @@
                 <div class="double-bounce2"></div>
         </div>
         <fieldset>
-          
+          <div class="messages"></div>
           <label for="name">Name(*):</label>
           <input type="text" id="name" name="user_name" required>
           
@@ -50,7 +50,6 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="ajax/registerUser.js"></script>
-
 
 
 </body>
