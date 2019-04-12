@@ -36,8 +36,8 @@
 									echo '<p>'.$row['address'].'</p>';
 									if($row['number'] > 0) echo '<p>'.$row['number'].'</p>';
 									echo '<p>Rating: '.$row['rating'].'/5.0</p>';
-									echo '<a href="Menu.php?res_link='.$row['link'].'" class="card-link">Menu</a>';
-									echo '<a href="Reviews.php?res_link='.$row['link'].'" class="card-link">Reviews</a>';
+									echo '<a target="_blank" href="Menu.php?res_link='.$row['link'].'" class="card-link">Menu</a>';
+									echo '<a target="_blank" href="Reviews.php?res_link='.$row['link'].'" class="card-link">Reviews</a>';
 
 									if (isset($_SESSION['user_id'])){
 										echo '<a href="Booking.php?res_id='.$row['id'].'" class="card-link">Reserve Now!</a>';

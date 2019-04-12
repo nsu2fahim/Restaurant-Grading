@@ -10,13 +10,14 @@
 
 
 
-<div id="table">
+	<div id="table">
 		<h1>Booking History</h1>
 		<div id="loading_spinner" class="spinner" style="display: none;">
 			<div class="double-bounce1"></div>
 			<div class="double-bounce2"></div>
     	</div>
     </div>
+	<br>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="ajax/bookingHistory.js"></script>
 </body>

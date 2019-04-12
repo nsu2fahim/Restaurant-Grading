@@ -1,8 +1,15 @@
 <?php require_once('connection.php') ?>
 
-<?php 
+<?php
+    include_once ('includes/db.inc.php');
+    include_once ('includes/restaurants.inc.php'); 
+    
     $area_name = $_GET['area_name'];
     $type = $_GET['type'];
-    $sql = "SELECT * FROM restaurants where location = '$area_name' and type LIKE '%$type%' order by rating desc";
-    $results = mysqli_query($conn, $sql);
+
+    $database = new DB();
+    $conn = $database->getConnection();
+    $restaurants = new Restaurant($conn);
+    $results = $restaurants->getRecommendations($area_name, $type);
+
 ?>

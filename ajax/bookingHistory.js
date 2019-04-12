@@ -29,7 +29,7 @@ $(document).ready(function(){
 
                         var todays_date = new Date()
                         var booking_date = new Date(data['date_time'])
-                        console.log(todays_date, booking_date, booking_date < todays_date)
+                        // console.log(todays_date, booking_date, booking_date < todays_date)
                     
                         if(booking_date < todays_date){
                             row += ('<td style="color: red;">' + 'Expired' + '</td>');
