@@ -66,14 +66,19 @@
 				}
 				?>
 				<div class="modal">
-					<!-- <div id="map" style="width: 320px; height: 480px;"></div> -->
+					<p>Address: </p>
+					<p id="address"></p>
+					<div id="map" style="width: 350px; height: 350px;"></div>
 				</div>
+				
 			
 	</section>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-uiIccbVakz6Rh42nmNIlJKEGOGZNNqE&callback="></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-
+	
 	<script>
 		$(document).ready(function(){
 			var mySwiper = new Swiper ('.swiper-container', {
@@ -96,23 +101,39 @@
 				},
 
 			});
+			
+
 			$('.open-modal').click(function(event) {
 				event.preventDefault();
 				this.blur(); // Manually remove focus from clicked link.
 				var id = $(this).attr('id');
-				console.log(id)
-				// $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+id+'&sensor=false', null, function (data) {
-				// var p = data.results[0].geometry.location
-				// var latlng = new google.maps.LatLng(p.lat, p.lng);
-				// 	var aMarker= new google.maps.Marker({
-				// 		position: latlng, //it will place marker based on the addresses, which they will be translated as geolocations. 
-				// 		map: map 
+				// console.log(id)
+				
+				var map = new google.maps.Map(document.getElementById('map'), {
+					zoom: 14,
+					center: {lat: 23.817041, lng: 90.425445}
+				});
 
-				// 	});
-				// });
-				$('.modal').appendTo('body').html('Google Map Address to show: ' + id).modal();
+				var geocoder = new google.maps.Geocoder();
+
+				geocoder.geocode({'address': id}, function(results, status) {
+					if (status === 'OK') {
+						map.setCenter(results[0].geometry.location);
+						var marker = new google.maps.Marker({
+						map: map,
+						position: results[0].geometry.location
+						});
+					} else {
+						alert('Geocode was not successful for the following reason: ' + status);
+					}
+				});
+				
+
+				$('.modal').modal();
+				$('#address').text(id);
 			});
 		});
 	</script>
+
 </body>
 </html>
