@@ -2,6 +2,7 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Restaurant Grading</title>
 	<link rel="stylesheet" href="assets/stylesheets/LandingPage.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400">
