@@ -1,0 +1,11 @@
+{
+    "name": "koushikroy/restaurant-grading",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Koushik Roy",
+            "email": "96koushikroy@gmail.com"
+        }
+    ],
+    "require": {}
+}
