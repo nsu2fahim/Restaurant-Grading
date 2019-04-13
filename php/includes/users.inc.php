@@ -86,5 +86,29 @@ class User{
         }
     }
 
+    function googleLoginUser($email){
+        $sql = "select * from users where email = '". $email . "'";
+        $result = $this->conn->query($sql);
+
+        $row = $result->fetch_assoc();
+        if($result->num_rows > 0){
+            if($row['email'] == $email){
+                $data = array(
+                    'status' => 'success',
+                    'email' => $email,
+                    'name' => $row['full_name'],
+                    'id' => $row['id']
+                );
+                return json_encode($data);
+            }
+        }
+        else{
+            $data = array(
+                'status' => 'error',
+                'message' => 'Failed to login.'
+            );
+            return json_encode($data);
+        }
+    }
 }
 ?>

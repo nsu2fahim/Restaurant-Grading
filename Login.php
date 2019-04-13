@@ -4,6 +4,9 @@
 	<title>Login</title>
 	<link rel="stylesheet" href="assets/stylesheets/SignUp.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400">
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="935364450225-5l7buqbtb1ugfnh4vebalve7pkro3eov.apps.googleusercontent.com">
 </head>
 <body>
 
@@ -36,15 +39,16 @@
             <input type="password" id="password" name="user_password" required>
           
             <button id="login" type="submit">Login</button>
+            <br>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
         </form>
 
     
   </section>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="ajax/loginUser.js"></script>
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="ajax/loginUser.js"></script>
+    <script src="ajax/googleLogin.js"></script>
 </body>
 
 

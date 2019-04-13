@@ -45,6 +45,8 @@ $(document).ready(function(){
             // console.log(data)
             // alert(result.message) //will show a panel for all alerts
             $('.messages').html('<div class="panel-default">'+result.message+'</div>');
+            //https://api.clockworksms.com/http/send.aspx?key=KEY&to=441234567890&content=Hello+World
+            
             $('#loading_spinner').css("display", "none");
             $('form#booking_form')[0].reset()
         });

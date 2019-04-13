@@ -4,5 +4,6 @@ $(document).ready(function(){
         $.get("php/logout.php", function(res){
             $(location).attr('href', home_url);
         });
+        
     });
 });

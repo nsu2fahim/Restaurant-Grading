@@ -17,7 +17,7 @@ $(document).ready(function(){
         };
 
        
-
+        $('#loading_spinner').css("display", "block");
         $.post("php/Login.php", Data, function(data){
             var result = JSON.parse(data);
             // console.log(data)
