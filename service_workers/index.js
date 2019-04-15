@@ -27,9 +27,4 @@ const main = async () => {
     
 }
 
-// var source = new EventSource("http://localhost:8888/restaurant-grading/service_workers/serviceStream.php");
-// source.addEventListener('message', function(e) {
-//     console.log(e.data);
-// }, false);
-
 main()

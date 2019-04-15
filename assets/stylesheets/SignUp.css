@@ -472,3 +472,49 @@ Loading Spinner CSS
   min-width: 245px;
   width: 245px;
 }
+
+@media screen and (max-width: 768px) {
+  .nav,li,h3.tagline{
+     float: none;
+     width: 100%;
+     text-align: left;
+     
+   }
+   .lead,.container{
+     float: none;
+     width: 768px;
+     padding-left:  20px;
+     padding-right: 20px;
+   }
+   .lead p {
+   font-size: 15px;
+   line-height: 28px;
+ }
+   .row-alt{
+     min-width: 768px;
+   }
+   
+ }
+ 
+ @media screen and (max-width: 600px) {
+  .nav,li,h3.tagline{
+     float: none;
+     width: 100%;
+     
+   }
+   .lead,.container{
+     float: none;
+     width: 600px;
+     padding-left: 10px;
+     padding-right: 10px;
+   }
+   .lead p {
+   font-size: 12px;
+   line-height: 28px;
+ }
+   .row-alt{
+     min-width: 600px;
+   }
+   
+ 
+ }

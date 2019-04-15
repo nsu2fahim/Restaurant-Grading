@@ -1,4 +1,4 @@
-<?php require_once('connection.php') ?>
+<?php //require_once('connection.php') ?>
 
 <?php
     include_once ('includes/db.inc.php');

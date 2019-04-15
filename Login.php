@@ -40,7 +40,8 @@
           
             <button id="login" type="submit">Login</button>
             <br>
-            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <p style="display: flex; justify-content: center;">Or,</p>
+            <div class="g-signin2" data-onsuccess="onSignIn" style="display: flex; justify-content: center;"></div>
         </form>
 
     
